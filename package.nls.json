@@ -1,0 +1,14 @@
+{
+  "displayName": "TweetProcessing Counter",
+  "description": "Character counter for TweetProcessing with Twitter-style counting",
+  "config.title": "TweetProcessing Counter",
+  "config.label.description": "Unit to display after character count (leave empty for auto: ja=文字, en=chars)",
+  "config.showLineCount.description": "Show line count in tooltip",
+  "config.lineBreakCount.description": "How to count line breaks",
+  "config.lineBreakCount.actual": "Actual character count (LF=1 char, CRLF=2 chars)",
+  "config.lineBreakCount.single": "Always count line breaks as 1 character",
+  "config.countingMode.description": "Character counting method",
+  "config.countingMode.standard": "Standard (1 character per character)",
+  "config.countingMode.twitter": "Twitter-style (CJK characters = 2, URLs = 23, etc.)",
+  "config.warningThreshold.description": "Show warning when character count exceeds this number (0 to disable)"
+}

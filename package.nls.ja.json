@@ -1,0 +1,14 @@
+{
+  "displayName": "TweetProcessing Counter",
+  "description": "つぶやきProcessing用の文字数カウンター（Twitter方式）",
+  "config.title": "TweetProcessing Counter",
+  "config.label.description": "文字数の後に表示する単位（空欄でロケール自動: 日本語=文字、英語=chars）",
+  "config.showLineCount.description": "ツールチップに行数を表示する",
+  "config.lineBreakCount.description": "改行のカウント方法",
+  "config.lineBreakCount.actual": "実際の改行文字数（LF=1文字、CRLF=2文字）",
+  "config.lineBreakCount.single": "改行を常に1文字としてカウント",
+  "config.countingMode.description": "文字カウント方式",
+  "config.countingMode.standard": "標準（1文字=1カウント）",
+  "config.countingMode.twitter": "Twitter方式（日本語等=2、URL=23など）",
+  "config.warningThreshold.description": "この文字数を超えたら警告表示（0で無効）"
+}

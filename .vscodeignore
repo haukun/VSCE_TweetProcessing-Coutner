@@ -1,0 +1,8 @@
+src/**
+tsconfig.json
+.gitignore
+.git
+.vscode
+node_modules
+*.vsix
+.kiro/**

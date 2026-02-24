@@ -1,0 +1,90 @@
+{
+  "name": "tweetprocessing-counter",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "twitter",
+    "processing",
+    "character counter",
+    "つぶやきProcessing",
+    "文字数カウント",
+    "japanese"
+  ],
+  "galleryBanner": {
+    "color": "#1DA1F2",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "%config.title%",
+      "properties": {
+        "characterCounter.label": {
+          "type": "string",
+          "default": "",
+          "description": "%config.label.description%"
+        },
+        "characterCounter.showLineCount": {
+          "type": "boolean",
+          "default": true,
+          "description": "%config.showLineCount.description%"
+        },
+        "characterCounter.lineBreakCount": {
+          "type": "string",
+          "enum": ["actual", "single"],
+          "enumDescriptions": [
+            "%config.lineBreakCount.actual%",
+            "%config.lineBreakCount.single%"
+          ],
+          "default": "single",
+          "description": "%config.lineBreakCount.description%"
+        },
+        "characterCounter.countingMode": {
+          "type": "string",
+          "enum": ["standard", "twitter"],
+          "enumDescriptions": [
+            "%config.countingMode.standard%",
+            "%config.countingMode.twitter%"
+          ],
+          "default": "twitter",
+          "description": "%config.countingMode.description%"
+        },
+        "characterCounter.warningThreshold": {
+          "type": "number",
+          "default": 259,
+          "description": "%config.warningThreshold.description%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.x",
+    "@types/vscode": "^1.60.0",
+    "typescript": "^4.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/tweetprocessing-counter"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/tweetprocessing-counter/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/tweetprocessing-counter#readme",
+  "license": "MIT"
+}

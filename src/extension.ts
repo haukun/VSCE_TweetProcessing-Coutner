@@ -87,12 +87,16 @@ function updateCharacterCount() {
     const lineCount = editor.document.lineCount;
     const isOverLimit = warningThreshold > 0 && charCount > warningThreshold;
 
+    // 残り文字数の計算
+    const remaining = warningThreshold > 0 ? warningThreshold - charCount : 0;
+    const remainingText = warningThreshold > 0 ? ` (${remaining.toLocaleString()})` : '';
+
     // 制限超過時は警告アイコンと背景色を変更
     if (isOverLimit) {
-        statusBarItem.text = `$(warning) ${charCount.toLocaleString()} ${label}`;
+        statusBarItem.text = `$(warning) ${charCount.toLocaleString()} ${label}${remainingText}`;
         statusBarItem.backgroundColor = new vscode.ThemeColor('statusBarItem.warningBackground');
     } else {
-        statusBarItem.text = `$(symbol-string) ${charCount.toLocaleString()} ${label}`;
+        statusBarItem.text = `$(symbol-string) ${charCount.toLocaleString()} ${label}${remainingText}`;
         statusBarItem.backgroundColor = undefined;
     }
     
